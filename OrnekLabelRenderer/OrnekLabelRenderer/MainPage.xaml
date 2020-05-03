@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:OrnekLabelRenderer.OzelRenderer"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             mc:Ignorable="d"
+             x:Class="OrnekLabelRenderer.MainPage"
+             Title="Çizim Alanı">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Otorenk" Clicked="RenkDegistir"                
+                 Order="Primary"
+                 Priority="0" />
+        <ToolbarItem x:Name="temizleTB"  Text="Temizle"   Clicked="YeniCizimOlustur"          
+                 Order="Primary"
+                 Priority="1" />
+        <ToolbarItem x:Name="kaydetTB"  Text="Kaydet"   Clicked="kaydetTB_Clicked"          
+                 Order="Primary"
+                 Priority="1" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+    <StackLayout Orientation="Vertical" Padding="10" Margin="10">
+        
+            <local:CizimGorunumu x:Name="cizimGorunumu" CizimBasladi="TemizlemeyiEtkinlestir" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CizimRengi="Red" />
+       
+    </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
